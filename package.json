@@ -8,7 +8,9 @@
       "client": "npm start --prefix client",
       "clientinstall": "npm install --prefix client",
       "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "render-postbuild": "npm install --prefix client && npm run build --prefix client"     
+      "build": "cd client && npm run build",
+      "install-client": "cd client && npm install",
+      "render-postbuild": "npm run install-client && npm run build"
   },
   "dependencies": {
     "concurrently": "^7.6.0",
